@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<!-- dynamic header information from handlebars -->
+		<title>{{ appInfo.name }}</title>
+		<meta name="description" content="{{ appInfo.description }}">
+		<meta name="author" content="{{ appInfo.author }}">
+		<!--Let browser know website is optimized for mobile-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<!--Import Google Icon Font-->
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<!-- Compiled and minified CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+		<!-- Link stylesheet from public directory -->
+		<link rel="stylesheet" href="/assets/stylesheets/style.css" type="text/css" />
+	</head>
+	<body>
+	<header>
+		<!-- simple header for the entire application -->
+		<nav class="teal lighten-1">
+			<div class="nav-wrapper">
+				<a class="brand-logo center">{{ appInfo.name }}</a>
+			</div>
+		</nav>
+	</header>
+	<main>
+		<!-- routes will be passed into the body from handlebars -->
+		{{{ body }}}
+	</main>
+	<!-- footer for the entire application -->
+	<footer class="page-footer teal lighten-1">
+		<div class="footer-copyright">
+			<div class="container">
+				<!-- dynamic app repo from github -->
+				<a class="grey-text text-lighten-4" href="{{ appInfo.github }}">Github Repo</a>
+			</div>
+		</div>
+	</footer>
+	<!--Import jQuery before materialize.js-->
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<!-- Compiled and minified JavaScript -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+	</body>
+</HTML>

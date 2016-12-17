@@ -1,0 +1,26 @@
+/***
+  STICKY FOOTER
+***/
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+main {
+  flex: 1 0 auto;
+}
+/***
+  BURGER
+***/
+.burger-row {
+  height: 100px;
+}
+.burger-background {
+  background-image: url('../images/burger.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 100%;
+  font-weight: bolder;
+  font-size: 24px;
+}

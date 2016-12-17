@@ -1,0 +1,56 @@
+<!-- main page container -->
+<div class="container">
+	<!-- CREATE A BURGER ROW -->
+	<div class="row">
+		<div class="col s12">
+			<!-- form will create a burger by posting to the burger api route -->
+			<form action="/burger" method="POST">
+				<!-- inline form text -->
+				Enter the name of a burger and click the "Submit" button:
+	      <div class="input-field inline">
+					<!-- `burger_name` matches the database attribute and will help us pass information to the database -->
+					<input type="text" name="burger_name" value="" type="text" class="validate">
+					<label for="burger">Burger Name</label>
+	      </div>
+				<!-- form submit -->
+				<button type="submit" class="waves-effect waves-light btn">Submit</button>
+			</form>
+		</div>
+	</div>
+	<!-- burger display row -->
+	<div class="row">
+		<!-- burgers waiting to be devoured -->
+		<div class="row col s6 m7 l8">
+				<!-- each burger with `devoured = false` (passed from handlebars express) -->
+			  {{#each burger}} {{#unless this.devoured}}
+					<div class="row">
+						<!-- burger (left side) -->
+						<div class="burger-row col s6">
+							<div class="burger-background center-align">{{this.burger_name}}</div>
+						</div>
+						<!-- post button (right side) -->
+						<div class="col s6">
+							<!-- form will update a burger with a put to the burger api route -->
+							<form method="POST" action="/devoured?_method=PUT">
+								<!-- hidden inputs hold that data for interacting with the database when called -->
+								<!-- `burger_id` matches the database attribute and will help us pass information to the database -->
+								<input type="hidden" type="text" name="burger_id" value={{this.id}}>
+								<!-- `devoured` matches the database attribute and will help us pass information to the database -->
+								<input type="hidden" type="text" name="devoured" value={{this.devoured}}>
+								<button type="submit" class="btn btn-default">Devour!</button>
+							<!-- form submit -->
+							</form>
+						</div>
+					</div> <!-- END: each burger with `devoured = false` -->
+				{{/unless}} {{/each}}
+		</div>
+		<div class="row col s6 m5 l4 center-align">
+			<ul class="collection">
+				<!-- each burger with `devoured = true` (passed from handlebars express) -->
+				{{#each burger}} {{#if this.devoured}}
+					<li class="collection-item">{{this.id}} - {{this.burger_name}}</li>
+			  {{/if}} {{/each}}
+			</ul>
+		</div>
+	</div>
+</div>
