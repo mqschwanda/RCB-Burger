@@ -3,7 +3,7 @@
 * Demo: [Heroku](https://rcb-burger.herokuapp.com/)
 
 ### Quick Start
-**mySQL is required for this application to function. If you do not have mySQL installed on your local machine [click here](https://dev.mysql.com/downloads/installer/) to install the proper software before continuing.**
+**mySQL is required for this application to function. If you do not have mySQL installed on your local machine [click here](https://dev.mysql.com/downloads/installer/) to install the proper software before continuing.**  
 1. Clone the repo to your local machine.
 ```
 git clone https://github.com/mqschwanda/RCB-Burger.git
