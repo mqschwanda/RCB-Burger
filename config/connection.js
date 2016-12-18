@@ -1,26 +1,8 @@
-// require mysql and configuration function
+// require mysql
 var mysql = require('mysql');
-var Configurable = require('configurable');
-// object to be configured
-var config = {};
-// returns the object with new constructor prototypes
-Configurable(config);
-/****
-  object now has the following prototypes:
-    .get(name)
-    .set(name, val) or .set(obj)
-    .enable(name) or .disable(name)
-    .enabled(name) & .disabled(name)
-****/
-// CONFIGURE HERE:
-config.set('host','o61qijqeuqnj9chh.cbetxkdyhwsb.us-east-1.rds.amazonaws.com')
-      .set('user','otx5eja9lj2d0y6w')
-      .set('password','hu75oq6nkss34ku5')
-      .set('port',3306)
-      .set('database','burgers_db');
 // END: configuration
 // configure the database with the object just created
-var connection = mysql.createConnection(config.settings);
+var connection = mysql.createConnection(process.env.JAWSDB_URL);
 // connect to the database
 connection.connect(function(err) {
   if (err) {
