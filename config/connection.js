@@ -14,8 +14,9 @@ Configurable(config);
 ****/
 // CONFIGURE HERE:
 config.set('host','o61qijqeuqnj9chh.cbetxkdyhwsb.us-east-1.rds.amazonaws.com')
-      .set('user','ju3nkt2ayiqsgfgd')
-      .set('password','qeziufb0xx8ai90g')
+      .set('user','otx5eja9lj2d0y6w')
+      .set('password','hu75oq6nkss34ku5')
+      .set('port',3306)
       .set('database','burgers_db');
 // END: configuration
 // configure the database with the object just created
