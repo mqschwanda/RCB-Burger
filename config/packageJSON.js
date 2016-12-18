@@ -1,20 +1,3 @@
-Skip to content
-This repository
-Search
-Pull requests
-Issues
-Gist
- @mqschwanda
- Unwatch 1
-  Star 0
- Fork 0 mqschwanda/RCB-Burger
- Code  Issues 0  Pull requests 0  Projects 0  Wiki  Pulse  Graphs  Settings
-Branch: master Find file Copy pathRCB-Burger/config/packageJSON.js
-f15b757  2 hours ago
-@mqschwanda mqschwanda upload files
-1 contributor
-RawBlameHistory
-24 lines (22 sloc)  702 Bytes
 // require package.json and configuration function
 var packageJSON = require('./../package.json');
 var Configurable = require('configurable');
