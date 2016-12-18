@@ -13,9 +13,9 @@ Configurable(config);
     .enabled(name) & .disabled(name)
 ****/
 // CONFIGURE HERE:
-config.set('host','o61qijqeuqnj9chh.cbetxkdyhwsb.us-east-1.rds.amazonaws.com')
-      .set('user','ju3nkt2ayiqsgfgd')
-      .set('password','qeziufb0xx8ai90g')
+config.set('host','localhost')
+      .set('user','root')
+      .set('password','')
       .set('database','burgers_db');
 // END: configuration
 // configure the database with the object just created
