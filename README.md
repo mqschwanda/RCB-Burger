@@ -4,21 +4,21 @@
 
 ### Quick Start
 **mySQL is required for this application to function. If you do not have mySQL installed on your local machine [click here](https://dev.mysql.com/downloads/installer/) to install the proper software before continuing.**  
-1. Clone the repo to your local machine.
+* Clone the repo to your local machine.
 ```
 git clone https://github.com/mqschwanda/RCB-Burger.git
 cd RCB-Burger
 ```
-2. Run mysql as root, you will be asked to enter your root password.  
+* Run mysql as root, you will be asked to enter your root password.  
 `mysql -u root -p`
-3. With the `mysql>` command line tool running you will run the next three commands:   
+* With the `mysql>` command line tool running you will run the next three commands:   
 	* execute database schema file:  
 	`source db/schema.sql`   
 	* execute database seed file:  
 	`source db/seeds.sql`   
 	* exit the mysql command line interface:  
 	`exit`
-4. Run the scripts to start the application for the first time.
+* Run the scripts to start the application for the first time.
 ```
 npm run setup
 npm run start
