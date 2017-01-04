@@ -1,4 +1,4 @@
-// require mysql and configuration function
+// require mysql and configurable
 var mysql = require('mysql');
 var Configurable = require('configurable');
 // object to be configured
@@ -19,7 +19,7 @@ config.set('host','localhost')
       .set('database','burgers_db');
 // END: configuration
 // configure the database with the object just created
-var connection = mysql.createConnection(config.settings);
+var connection = mysql.createConnection(config.setings);
 // connect to the database
 connection.connect(function(err) {
   if (err) {

@@ -13,7 +13,7 @@ Configurable(config);
     .enabled(name) & .disabled(name)
 ****/
 // CONFIGURE HERE:
-config.set('name',packageJSON.name)
+config.set('name',packageJSON.name.toUpperCase())
       .set('github',packageJSON.repository.url)
       .set('description',packageJSON.description)
       .set('author',packageJSON.author);
